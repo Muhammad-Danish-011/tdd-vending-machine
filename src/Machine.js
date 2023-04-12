@@ -51,7 +51,7 @@ then I see the new total on a screen.
 After depositing Rs 100, deposit(50) returns 'You have deposited Rs 150'
 */
 
-
+/*
 let total = 0;
 
 function deposit(amount) {
@@ -67,3 +67,17 @@ function deposit(amount) {
 console.log(deposit(100)); 
 console.log(deposit(50)); 
 console.log('you have deposited :' +total);
+*/
+
+/*
+        As a customer, I want to see a message if my item is unavailable, so that I can make another choice.
+
+Given I am using the vending machine,
+when I enter a code for an item that is unavailable,
+then I see a message that the item is unavailable.
+selectItem(code) returns 'The item you selected is unavailable'
+*/
+
+
+
+

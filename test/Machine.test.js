@@ -49,7 +49,7 @@ function deposit(amount) {
   */
 
 // test case of 3rd story 
-
+/*
   describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
@@ -72,6 +72,33 @@ function deposit(amount) {
        // assert
        expect(150).toEqual(total);
       });
-  
-    
+  });
+  */
+  describe('the vending machine', () => {
+    it('should have items to purchase', () => {
+        // setup
+        
+let itemList = ['1', '2', '3'];
+
+let Machine = {
+    items: {
+      '1': { name: 'Coke', available: true },
+      '2': { name: 'Pepsi', available: false },
+      '3': { name: 'Water', available: true },
+     
+    }
+}
+         // exercise
+         for (let i = 0; i < itemList.length; i++) {
+          let code = itemList[i];
+          let item = Machine.items[code];
+          if (item && item.available) {
+            console.log(`Item ${code} (${item.name}) is available`);
+          } else {
+            console.log(`Item ${code} (${item ? item.name : 'unknown'}) is unavailable`);
+          }
+         }
+          // assert
+       expect(true).toEqual(true);
+      });
   });

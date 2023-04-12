@@ -24,6 +24,7 @@
         The machine should accept bills in these amounts: 10, 20, 50, 100, 500
 */
   
+/*
 let total = 0;
 
 function deposit(amount) {
@@ -38,3 +39,17 @@ function deposit(amount) {
 console.log(deposit(100)); 
 console.log(deposit(50)); 
 console.log(deposit(200)); 
+
+*/
+
+/*
+As a customer, I want to add additional money, so that I can use the denominations I have to purchase an item.
+
+Given I have deposited money in the vending machine,
+when I deposit additional money,
+then I see the new total on a screen.
+After depositing Rs 100, deposit(50) returns 'You have deposited Rs 150'
+*/
+
+
+

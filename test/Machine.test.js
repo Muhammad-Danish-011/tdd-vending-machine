@@ -22,7 +22,7 @@ const Machine = require('../src/Machine');
 });
 */
 // test case of 2nd story
-describe('the vending machine', () => {
+/* describe('the vending machine', () => {
   it('should have items to purchase', () => {
       // setup
       let total = 0;
@@ -42,6 +42,35 @@ function deposit(amount) {
        console.log(deposit(200)); 
        // assert
        expect(true).toEqual(true);
+      });
+  
+    
+  });
+  */
+
+// test case of 3rd story 
+
+  describe('the vending machine', () => {
+    it('should have items to purchase', () => {
+        // setup
+        let total = 0;
+
+        function deposit(amount) {
+          if ([10, 20, 50, 100, 500].includes(amount)) {
+            total += amount;
+            return ` deposited amount Rs ${total}`;
+          } 
+            else
+             {
+            return 'Invalid bill amount';
+          }
+        }
+         // exercise
+         console.log(deposit(100)); 
+         console.log(deposit(50)); 
+         console.log('you have deposited :' +total);
+       // assert
+       expect(100).toEqual(total);
       });
   
     

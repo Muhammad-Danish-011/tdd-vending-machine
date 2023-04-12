@@ -24,17 +24,3 @@
         The machine should accept bills in these amounts: 10, 20, 50, 100, 500
 */
   
-let total = 0;
-
-function deposit(amount) {
-  if ([10, 20, 50, 100, 500].includes(amount)) {
-    total += amount;
-    return ` deposited amount Rs ${total}`;
-  } 
-    else {
-    return 'Invalid bill amount';
-  }
-}
-console.log(deposit(100)); 
-console.log(deposit(50)); 
-console.log(deposit(200)); 

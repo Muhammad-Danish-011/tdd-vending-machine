@@ -107,5 +107,35 @@ when I have not deposited enough money for that item,
 then I see a message telling me how much more to deposit.
 selectItem(code) returns 'Your deposit is insufficient.  Please add Rs 20 for this item'
     */
+let ItemList = ['1', '2', '3'];
+let Machine = {
+  items: {
+    '1': { name: 'Coke', price: 25 },
+    '2': { name: 'Pepsi', price: 30 },
+    '3': { name: 'Water', price: 15 },
+    
+  }
+ 
+};
 
+
+function selectItem(code, deposit) {
+  let item = Machine.items[code];
+  if (item && deposit >= item.price) {
+    
+    return `Enjoy your ${item.name}!`;
+  } else if (item && deposit < item.price) {
+   
+    let amountNeeded = item.price - deposit;
+    return `Your deposit is insufficient. Please add Rs ${amountNeeded} for this item.`;
+  } else {
+   
+    return 'Invalid item code.';
+  }
+}
+
+
+console.log(selectItem('2', 20)); 
+console.log(selectItem('1', 15)); 
+console.log(selectItem('3', 50)); 
 

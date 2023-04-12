@@ -145,7 +145,56 @@ console.log(selectItem('3', 50));
 */
 
 /*
+As a customer, I want to receive change, so that I don’t pay more than the item costs.
 
+Given I have made a selection,
+when the item is delivered,
+then I receive correct change (in correct monetary units)
+selectItem(code) returns an object with the item and an array of bills {item: 'mints', change: [20, 10]}
 
 */
+let ItemList = ['1', '2', '3'];
+
+let Machine = {
+  items: {
+    '1': { name: 'Coke', price: 25 },
+    '2': { name: 'Pepsi', price: 30 },
+    '3': { name: 'Water', price: 15 },
+    
+  }
+  
+};
+
+
+let a = [50, 20, 10, 5, 1];
+
+
+function selectItem(code, deposit) {
+  let item =Machine.items[code];
+  if (!item) {
+    
+    return { item: null, change: null };
+  }
+  if (deposit < item.price) {
+   
+    return { item: null, change: null };
+  }
+  let change = [];
+  let remainingChange = deposit - item.price;
+  for (let i = 0; i < a.length; i++) {
+    const bill = a[i];
+    while (remainingChange >= bill) {
+      remainingChange -= bill;
+      change.push(bill);
+    }
+  }
+  
+  return { item: item.name, change: change };
+}
+
+
+console.log(selectItem('1', 50)); 
+console.log(selectItem('2', 15)); 
+console.log(selectItem('3', 50));
+
 

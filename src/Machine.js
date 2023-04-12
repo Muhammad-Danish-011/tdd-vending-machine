@@ -52,4 +52,18 @@ After depositing Rs 100, deposit(50) returns 'You have deposited Rs 150'
 */
 
 
+let total = 0;
 
+function deposit(amount) {
+  if ([10, 20, 50, 100, 500].includes(amount)) {
+    total += amount;
+    return ` deposited amount Rs ${total}`;
+  } 
+    else
+     {
+    return 'Invalid bill amount';
+  }
+}
+console.log(deposit(100)); 
+console.log(deposit(50)); 
+console.log('you have deposited :' +total);

@@ -70,7 +70,7 @@ function deposit(amount) {
          console.log(deposit(50)); 
          console.log('you have deposited :' +total);
        // assert
-       expect(100).toEqual(total);
+       expect(150).toEqual(total);
       });
   
     

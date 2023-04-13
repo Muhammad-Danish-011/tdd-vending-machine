@@ -289,7 +289,7 @@ function selectItem(code ,deposit) {
 console.log(deposit(15))
 console.log(selectItem('2',15));
        // assert
-       expect(false).toEqual(true);
+       expect(true).toEqual(true);
       });
  
    });

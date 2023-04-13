@@ -210,8 +210,8 @@ cancel() returns {change: [100]}
 
 
 */
-
-
+/*
+let ItemList = ['1', '2', '3'];
 let vendingMachine = {
   items: {
     '1': { name: 'Coke', price: 25 },
@@ -252,6 +252,52 @@ let  change = [];
 deposit(50);
 console.log(cancel()); 
 console.log(depositedAmount);
+
+
+*/
+/*
+As a customer, I want to know if the vending machine can make change, so that I can cancel my choice if it can't make change.
+
+Given I have deposited money and selected a choice,
+when the machine does not have correct change,
+then I see a message
+selectItem(code) returns 'Cannot return proper change.  Please choose another item or cancel the transaction'
+*/
+
+let ItemList = ['1', '2', '3'];
+let Machine = {
+  items: {
+    '1': { name: 'Coke', price: 25 },
+    '2': { name: 'Pepsi', price: 30 },
+    '3': { name: 'Water', price: 15 },
+    
+  },
+};
+
+let billDenominations = [50, 20, 10, 5, 1];
+
+let depositedAmount = 0;
+
+
+function deposit(amount) {
+  depositedAmount += amount;
+}
+
+function selectItem(code ,deposit) {
+  let item =Machine.items[code];
+  if (!billDenominations) {
+    
+    return { deposit:depositedAmount};
+  }
+
+}
+console.log(deposit(15))
+console.log(selectItem('2',15));
+console.log('can not return proper change , please another item or cancel the transaction');
+
+
+
+
 
 
 

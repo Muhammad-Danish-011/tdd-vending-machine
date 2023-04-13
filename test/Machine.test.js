@@ -105,7 +105,7 @@ let Machine = {
   });
 
   */
-
+/*
   describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
@@ -144,7 +144,8 @@ let Machine = {
        expect(true).toEqual(true);
       });
   });
-
+*/
+  /*
   describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
@@ -198,3 +199,57 @@ console.log(selectItem('3', 50));
        expect(true).toEqual(true);
       });
   });
+ */
+
+  describe('the vending machine', () => {
+    it('should have items to purchase', () => {
+        // setup
+        
+        
+let vendingMachine = {
+  items: {
+    '1': { name: 'Coke', price: 25 },
+    '2': { name: 'Pepsi', price: 30 },
+    '3': { name: 'Water', price: 15 },
+    
+  },
+ 
+};
+
+
+let billDenominations = [50, 20, 10, 5, 1];
+
+let depositedAmount = 0;
+        //excute
+        
+function deposit(amount) {
+  depositedAmount += amount;
+}
+
+
+function cancel() {
+let  change = [];
+  let remainingChange = depositedAmount;
+  for (let i = 0; i < billDenominations.length; i++) {
+   let bill = billDenominations[i];
+    while (remainingChange >= bill) {
+      remainingChange -= bill;
+      change.push(bill);
+    }
+  }
+  depositedAmount = 0;
+ 
+  return { change: change };
+}
+
+
+deposit(50);
+console.log(cancel()); 
+console.log(depositedAmount);
+
+        // assert
+        expect(false).toEqual(true);
+      });
+ 
+   });
+

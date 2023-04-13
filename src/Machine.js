@@ -153,6 +153,9 @@ then I receive correct change (in correct monetary units)
 selectItem(code) returns an object with the item and an array of bills {item: 'mints', change: [20, 10]}
 
 */
+
+
+/*
 let ItemList = ['1', '2', '3'];
 
 let Machine = {
@@ -182,7 +185,7 @@ function selectItem(code, deposit) {
   let change = [];
   let remainingChange = deposit - item.price;
   for (let i = 0; i < a.length; i++) {
-    const bill = a[i];
+    let bill = a[i];
     while (remainingChange >= bill) {
       remainingChange -= bill;
       change.push(bill);
@@ -196,5 +199,59 @@ function selectItem(code, deposit) {
 console.log(selectItem('1', 50)); 
 console.log(selectItem('2', 15)); 
 console.log(selectItem('3', 50));
+*/
+/*
+As a customer, I want to receive my money back when I push the cancel button, so that I can change my mind.
+
+Given that I have deposited money,
+When I push the cancel button,
+Then I receive my money back
+cancel() returns {change: [100]}
+
+
+*/
+
+
+let vendingMachine = {
+  items: {
+    '1': { name: 'Coke', price: 25 },
+    '2': { name: 'Pepsi', price: 30 },
+    '3': { name: 'Water', price: 15 },
+    
+  },
+ 
+};
+
+
+let billDenominations = [50, 20, 10, 5, 1];
+
+let depositedAmount = 0;
+
+
+function deposit(amount) {
+  depositedAmount += amount;
+}
+
+
+function cancel() {
+let  change = [];
+  let remainingChange = depositedAmount;
+  for (let i = 0; i < billDenominations.length; i++) {
+   let bill = billDenominations[i];
+    while (remainingChange >= bill) {
+      remainingChange -= bill;
+      change.push(bill);
+    }
+  }
+  depositedAmount = 0;
+ 
+  return { change: change };
+}
+
+
+deposit(50);
+console.log(cancel()); 
+console.log(depositedAmount);
+
 
 

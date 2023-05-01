@@ -42,14 +42,9 @@ function deposit(amount) {
         let total = 0;
 
         function deposit(amount) {
-          // if ([10, 20, 50, 100, 500].includes(amount)) {
+         
             total += amount;
-          //   return ` deposited amount Rs ${total}`;
-          // } 
-          //   else
-          //    {
-          //   return 'Invalid bill amount';
-          // }
+         
         }
          // exercise
          console.log(deposit(100)); 
@@ -76,15 +71,7 @@ let Machine = {
     }
 }
          // exercise
-        //  for (let i = 0; i < itemList.length; i++) {
-        //   let code = itemList[i];
-        //   let item = Machine.items[code];
-        //   if (item && item.available) {
-        //     console.log(`Item ${code} (${item.name}) is available`);
-        //   } else {
-        //     console.log(`Item ${code} (${item ? item.name : 'unknown'}) is unavailable`);
-        //   }
-        //  }
+      
           // assert
        expect(true).toEqual(true);
       });

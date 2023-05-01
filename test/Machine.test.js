@@ -172,9 +172,9 @@ function deposit(amount) {
 function cancel() {
 
   }
-  depositedAmount = 0;
+  // depositedAmount = 0;
  
-  return { change: change };
+  // return { change: change };
 
 
     
@@ -183,7 +183,7 @@ console.log(cancel());
 console.log(depositedAmount);
     
         // assert
-        expect(true).toEqual(true);
+        expect(false).toEqual(true);
       });
  
    });

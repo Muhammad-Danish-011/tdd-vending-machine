@@ -107,7 +107,7 @@ let Machine = {
       });
   });
 
-  /*
+ 
   describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
@@ -131,24 +131,24 @@ let a = [50, 20, 10, 5, 1];
          // exercise
          
 function selectItem(code, deposit) {
-  let item =Machine.items[code];
-  if (!item) {
+  // let item =Machine.items[code];
+  // if (!item) {
     
-    return { item: null, change: null };
-  }
-  if (deposit < item.price) {
+  //   return { item: null, change: null };
+  // }
+  // if (deposit < item.price) {
    
-    return { item: null, change: null };
-  }
-  let change = [];
-  let remainingChange = deposit - item.price;
-  for (let i = 0; i < a.length; i++) {
-    const bill = a[i];
-    while (remainingChange >= bill) {
-      remainingChange -= bill;
-      change.push(bill);
-    }
-  }
+  //   return { item: null, change: null };
+  // }
+  // let change = [];
+  // let remainingChange = deposit - item.price;
+  // for (let i = 0; i < a.length; i++) {
+  //   const bill = a[i];
+  //   while (remainingChange >= bill) {
+  //     remainingChange -= bill;
+  //     change.push(bill);
+  //   }
+  // }
   
   return { item: item.name, change: change };
 }
@@ -158,10 +158,10 @@ console.log(selectItem('1', 50));
 console.log(selectItem('2', 15)); 
 console.log(selectItem('3', 50));
            // assert
-       expect(true).toEqual(true);
+       expect(false).toEqual(true);
       });
   });
- */
+
 /*
   describe('the vending machine', () => {
     it('should have items to purchase', () => {

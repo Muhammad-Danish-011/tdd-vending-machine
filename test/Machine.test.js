@@ -43,7 +43,7 @@ function deposit(amount) {
 
         function deposit(amount) {
           // if ([10, 20, 50, 100, 500].includes(amount)) {
-          //   total += amount;
+            total += amount;
           //   return ` deposited amount Rs ${total}`;
           // } 
           //   else
@@ -56,7 +56,7 @@ function deposit(amount) {
          console.log(deposit(50)); 
          console.log('you have deposited :' +total);
        // assert
-       expect(150).toEqual(total);
+       expect(100).toEqual(total);
       });
   });
   

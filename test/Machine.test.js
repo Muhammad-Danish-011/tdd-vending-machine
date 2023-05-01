@@ -60,7 +60,7 @@ function deposit(amount) {
       });
   });
   
- /*
+
   describe('the vending machine', () => {
     it('should have items to purchase', () => {
         // setup
@@ -76,21 +76,21 @@ let Machine = {
     }
 }
          // exercise
-         for (let i = 0; i < itemList.length; i++) {
-          let code = itemList[i];
-          let item = Machine.items[code];
-          if (item && item.available) {
-            console.log(`Item ${code} (${item.name}) is available`);
-          } else {
-            console.log(`Item ${code} (${item ? item.name : 'unknown'}) is unavailable`);
-          }
-         }
+        //  for (let i = 0; i < itemList.length; i++) {
+        //   let code = itemList[i];
+        //   let item = Machine.items[code];
+        //   if (item && item.available) {
+        //     console.log(`Item ${code} (${item.name}) is available`);
+        //   } else {
+        //     console.log(`Item ${code} (${item ? item.name : 'unknown'}) is unavailable`);
+        //   }
+        //  }
           // assert
-       expect(true).toEqual(true);
+       expect(false).toEqual(true);
       });
   });
 
-  */
+
 /*
   describe('the vending machine', () => {
     it('should have items to purchase', () => {

@@ -172,10 +172,6 @@ function deposit(amount) {
 function cancel() {
 
   }
-  // depositedAmount = 0;
- 
-  // return { change: change };
-
 
     
 deposit(50);
@@ -187,7 +183,7 @@ console.log(depositedAmount);
       });
  
    });
-/*
+
 
    describe('the vending machine', () => {
     it('should have items to purchase', () => {
@@ -214,21 +210,16 @@ function deposit(amount) {
 }
 
 function selectItem(code ,deposit) {
-  let item =Machine.items[code];
-  if (!billDenominations) {
-    
-    return { deposit:amount};
-  }
+  
 
 }
 console.log(deposit(15))
 console.log(selectItem('2',15));
        // assert
-       expect(true).toEqual(true);
+       expect(false).toEqual(true);
       });
  
    });
 
 
    
-*/
